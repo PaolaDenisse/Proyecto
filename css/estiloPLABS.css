@@ -1,0 +1,508 @@
+/* ------------ Generales ------------ */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--negro);
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --amarillo: #fceb00;
+    --violetaoscuro: #4f0374;
+    --violetaclaro: #9b66e2;
+    --azul: #1C6EA4;
+  
+    --fuenteprincipal: 'Exo 2', sans-serif;
+    --fuentesecundaria: 'Open Sans', sans-serif;
+    --fuenteterciaria: 'Raleway', sans-serif;
+}
+body{
+    font-family: var(--fuenteterciaria);
+    text-align: center;
+  }
+section {
+    padding: 4rem 2rem;
+    position: relative;
+}
+h3 {
+    padding: 1rem;
+    background-color: var(--amarillo);
+    background-size: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0.5em 0;
+    font-size: 4rem;
+    color: var(--negro);
+    font-family: inherit;
+    border-radius: 30rem;
+}
+h4 {
+    font-family: var(--fuentesecundaria);
+    margin: 0.5rem 0;
+    font-size: 3.5rem;
+    color: var(--amarillo);
+    text-transform: uppercase;
+    padding: 4rem 0;
+}
+h5 {
+    display: inline-block;
+    color: var(--amarillo);
+    font-family: var(--fuentesecundaria);
+    font-size: 3rem;
+    padding: 1rem 3rem;
+    justify-content: left;
+    border-radius: 30rem;
+    background-color: var(--violetaoscuro);
+}
+h6 {
+    color: var(--violetaclaro);
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+p {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    margin: 0;
+    font-family: var(--fuenteterciaria);
+    text-align: justify;
+}
+/* ------------ Navegación ------------ */
+.navegacion {
+    background-color: var(--negro); 
+    padding: 0.8rem 1.8rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.titulo, .titulo:link, .titulo:visited, .titulo:active {
+    padding-left: 3rem;
+    font-family: var(--fuenteprincipal);
+    font-size: 3.5rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: left;
+    display: flex;
+    margin: 0.5rem;
+}
+.navegación {
+    float: right;
+    text-align: right;
+    width: 70%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    align-items: center;
+    justify-content: right;
+}
+.navegación ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navegación ul li{
+    border-right: 0.125em solid rgba(255,255,255,1);
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+.navegación ul li a {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 1s;
+    align-items: center;
+}
+.navegación ul li a:hover, ul li a:active{
+    color: var(--amarillo);
+}
+.navegación ul li:nth-last-of-type(1) {
+    border-right: none;
+}
+@media (max-width:768px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+.título {
+      margin: 1.5rem 0;
+      font-size: 3rem;
+      display: flex;
+      text-align: center;
+      padding: 0;
+    }
+.navegacion {
+      position: static;
+      text-align: center;
+      justify-content: center;
+    }
+nav ul li {
+      display: flex;
+      flex-direction: column;
+      border-right: none;
+    }
+nav ul li a {
+      font-weight: bold;
+    }
+nav ul li:last-child {
+      padding-bottom: 2rem;
+    }
+}
+/* ------------ Portada ------------ */
+.contenedor {
+    max-width: 110rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 5rem;
+}
+.inicio {
+    background: url(../img/Impresora3D.jpg);
+    background-size: cover;
+    background-position: top;
+    bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    min-height: 50rem;
+}
+h2 {
+    color: var(--blanco);
+    font-family: var(--fuenteprincipal);
+    margin-top: 28rem;
+    font-size: 5rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15), 3px 10px 9px rgba(0,0,0,0.44);;
+}
+@media (max-width:768px) {
+    .inicio {
+      height: 50rem;
+    }
+}
+/* ----------- Análisis -------------*/
+article {
+    display: flex;
+    flex-direction: column;
+    column-gap: 6em;
+    padding-top: 0.5em;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 4rem;
+}
+.redsocialplabs, .competencia {
+    display: block;
+    max-width: 80%;
+    padding-top: 3rem;
+
+}
+.FODA {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.7fr 1fr;
+    padding: 3rem;
+    gap: 0rem 10rem;
+}
+.fortalezas li, .debilidades li, .amenazas li, .oportunidades li {
+    list-style-image: url("../img/right-arrowy16.png");
+    list-style-position: inside;
+    color: var(--blanco);
+    font-size: 2rem;
+    margin: 0;
+    font-family: var(--fuenteterciaria);
+    text-align: left;
+}
+.competencia {
+    column-count: 2;
+    gap: 10rem;
+    max-width: 85%;
+}
+.competencia h6 {
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+}
+.competencia__1 {
+    text-align: left;
+}
+.competencia__2, .competencia__2 p {
+    text-align: right;
+}
+ /* ------------ Estrategia -------------*/
+h5 span {
+    font-size: 5rem;
+    color: var(--blanco);
+}
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7rem;
+    margin: 3rem;
+}
+.antiguologoplabs, .flecha , .logoplabs {
+    width: 20rem;
+}
+@media (max-width:768px) {
+    .contenedor {
+        gap: 0;
+    }
+    .análisis, .estrategia, .contenido {
+        width: 100%;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+    }
+    .FODA {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        gap: 3rem;
+    }
+    .logos {
+        flex-direction: column;
+        gap: 0;
+    }
+    .icon {
+        display: none;
+    }
+    .redsocialplabs {
+        display: none;
+    }
+    .competencia {
+        column-count: 1;
+        flex-direction: column;
+    }
+    .mujer, .hombre {
+        display: none;
+    }
+    .objetivo {
+    column-count: 1;
+   }
+}
+.target {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding-bottom: 3rem;
+}
+.target p {
+    text-align: center;
+    padding-top: 7rem;
+}
+.mujer, .hombre {
+    width: 20rem;
+}
+.objetivo {
+    column-count: 3;
+    padding: 5rem;
+    gap: 3rem;
+}
+.objetivo__1, .objetivo__2, .objetivo__3 {
+    display: inline-block;
+}
+@media (max-width: 768px) {
+    h4, .target h4 {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    }
+    .target p {
+        padding-top: 0;
+    }
+    .objetivo {
+        column-count: 1;
+        padding: 1rem;
+    }
+    .objetivo__1, .objetivo__2, .objetivo__3 {
+        padding-bottom: 7rem;
+    }
+}
+ /* ------------ Contenido -------------*/
+.contenido h6 {
+    background-color: var(--violetaoscuro);
+    border-radius: 30rem;
+    padding: 1rem 3rem;
+    margin: 1rem 1rem;
+    margin-top: 4rem;
+    display: inline-block;
+    color: var(--amarillo);
+    font-size: 4rem;
+}
+/* Reconocimiento y sorteo */
+.reconocimiento, .sorteo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.reconocimiento__video, .sorteo__img {
+    width: 50rem;   
+}
+.reconocimiento__publicación, .reconocimiento__publicación p, .sorteo__publicación, .sorteo__publicación p {
+    max-width: 40rem;
+    background-color: var(--blanco);
+    color: var(--negro);
+    justify-content: center;
+    padding: 3rem;
+    font-size: 1.5rem;
+}
+.reconocimiento__plabs, .sorteo__plabs{
+    display: flex;
+    flex-direction: row;
+}
+.reconocimiento__plabs p, .sorteo__plabs p {
+    font-weight: bold;
+}
+.reconocimiento__logo, .sorteo__logo {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10rem;
+}
+.campaña {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5rem;
+    padding: 5rem 0;
+}
+.campaña p {
+    background-color: var(--azul);
+    padding: 2rem;
+    color: var(--blanco);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset 5px 5px 15px 5px rgba(0,0,0,0);    border-radius: 1rem;
+    text-align: center;
+}
+.campaña span{
+    color: var(--negro);
+    font-weight: bold;
+}
+/* Macetas y Pokemon */
+.macetas h6, .pokemon h6 {
+    margin-bottom: 4rem;
+}
+.macetas ul, .pokemon ul {
+    list-style-type: none;
+    padding: 0
+}  
+.macetas ul li, .pokemon ul li {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    transition: all 1s;
+}
+.macetas ul li a img, .pokemon ul li a img {
+    display: block;
+    width: 250px;
+    height: auto;
+} 
+.macetas ul li a, .pokemon ul li a {
+    background-color: #fff;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .7);
+    margin: 0 6px 20px;
+    padding: 10px 10px 25px ;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    display: inline-block;
+} 
+.macetas ul li a:after, .pokemon ul li a:after {
+    content: attr(title);
+    color: #333;
+    font-size: 1.25em;
+    position: relative;
+    top: 15rem;
+} 
+.macetas ul li:nth-child(4n+3) {
+    transform: rotate(-24deg);
+}
+.macetas ul li:nth-child(2n+2), .pokemon ul li:nth-child(2) {
+    transform: rotate(14deg);
+}
+.macetas ul li:nth-child(5), .pokemon ul li:nth-child(3){
+    transform: rotate(-8deg);
+}
+.macetas ul li:nth-child(6), .pokemon ul li:nth-child(1) {
+    transform: rotate(2deg);
+} 
+.macetas ul li a:hover, .pokemon ul li a:hover {
+    box-shadow: 0 0 15px 8px rgba(0, 0, 0, .8);
+}
+.macetas ul li:hover, .pokemon ul li:hover {
+    transform: rotate(0deg) scale(1.25);
+    z-index: 10
+}
+/* Iconos */
+.iconos {
+    column-count: 4;
+}
+.iconos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.iconos img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+} 
+@media (max-width:768px) {
+    .contenido, .reconocimiento, .sorteo, .campaña, .iconos {
+      display: flex;
+      flex-direction: column; 
+    align-items: center;    
+}
+    .contenido h6 {
+        max-width: 100%;
+        font-size: 3rem;
+    }
+    .reconocimiento__video, .sorteo__img {
+        max-width: 100%;
+    }
+}
+/* ----------- Pie de página -------------*/
+footer {
+    background-color: var(--negro);
+    padding: 2rem;
+    padding-top: 4rem;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 2rem;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(79,3,116,1) 52%); 
+}    
+footer p {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: var(--fuenteterciaria);
+    font-weight: 700;
+}
+
