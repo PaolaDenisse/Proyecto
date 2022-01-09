@@ -141,7 +141,7 @@ ul li:nth-last-of-type(1) {
 }
 /* ------------ Portada ------------ */
 .inicio {
-  background: url(../img/escritorio.jpg);
+  background: url(../img/escritorioVillanueva.jpg);
   background-size: cover;
   background-position: center center;
   bottom: 2em;
@@ -231,6 +231,9 @@ article{
   align-items: center;
   margin: 0 4rem;
 }
+.plabs, .rutinasaludable {
+  width: 50%;
+}
 h3 {
   text-transform: uppercase;
   margin: 0.5em 0;
@@ -265,8 +268,8 @@ article p {
 .img__plabs, .img__rutinasaludable {
   border-radius: 30%;
   width: 20rem;
-
 }
+
 @media (max-width:768px) {
   article {
     display: flex;
@@ -312,30 +315,34 @@ text-align: left;
   }
 }
 /* ----------- Contacto -------------*/
-.contacto .formulario, .contacto .mapa{
-  float: left;
-  width: 50%;
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
-.contacto .formulario{
-  text-align:left;
+.pContacto {
+  grid-column: 1 / 2;
 }
-.contacto .mapa iframe {
+.mapa {
+  grid-column: 2 / 3;
+}
+.mapa iframe {
   border: 0;
   height: 470px;
   width: 100%;
 }
-.contacto input, .contacto textarea {
-  width: 95%;
-  color: var(--verdeclaro);
-  border-radius: 0.25em;
-  border: 0.09375rem solid rgba(204, 204, 204, 1);
-  margin: 0.65em;
-  padding: 0.65em;
+h5 {
+  font-size: 3rem;
+  margin-top: 5rem;
 }
-.contacto input[type="submit"] {
-  background:  linear-gradient(rgba(0,210,100,1),rgba(0, 130, 60, 1));
-  border: 0;
-  color: var(--blanco);
+.textContacto {
+  font-size: 2.5rem;
+  padding: 4rem;
+}
+.infoContacto p {
+  font-size: 2rem;
+  align-items: center;
+  text-align: center;
 }
 @media (max-width:768px) {
   .contacto {
@@ -344,7 +351,7 @@ text-align: left;
     column-count: 1;
     float: none;
   }
-  .formulario form, .contacto .mapa iframe{
+  .contacto .pContacto, .contacto .mapa iframe{
     display: block;
     width: 200%;
     justify-content: center;
