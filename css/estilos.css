@@ -257,7 +257,6 @@ article a {
   font-weight: bold;
   padding: 1rem;
   text-decoration: none;
-  margin: 0 auto;
   margin: 5rem;
 }
 article p {
@@ -275,9 +274,18 @@ article p {
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    padding: 1rem;
+  }
+  article a {
+    margin: 3rem;
+    padding: 2rem;
   }
   .plabs, .rutinasaludable {
     margin: 3rem 0; 
+    width: 95%;
+  }
+  article p {
+    padding: 0;
   }
 }
 /* ----------- Sobre mí -------------*/
@@ -350,12 +358,12 @@ h5 {
     flex-direction: column;
     column-count: 1;
     float: none;
+    max-width: 100%;
   }
-  .contacto .pContacto, .contacto .mapa iframe{
+  .contacto .pContacto, .textContacto, .contacto .mapa iframe{
     display: block;
-    width: 200%;
     justify-content: center;
-    padding-top: 4rem;
+    padding-top: 1rem;
   }
 }
 /* ----------- Botón Arriba -------------*/
